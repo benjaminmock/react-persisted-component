@@ -22,7 +22,7 @@ export default class PersistedComponent extends Component {
           sessionStorage.setItem(this.storageKey, JSON.stringify(this.state));
         } catch (err) {}
       }
-      callback();
+      (callback || (() => {}))();
     });
   }
 }

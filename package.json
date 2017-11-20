@@ -1,6 +1,6 @@
 {
   "name": "react-persisted-component",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "description": "",
   "main": "dist/PersistedComponent.js",
   "scripts": {
@@ -25,6 +25,7 @@
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.2",
     "babel-preset-es2015": "^6.24.1",
+    "babel-preset-node-env": "^0.1.0",
     "babel-preset-react": "^6.24.1",
     "chai": "^4.1.2",
     "enzyme": "^3.2.0",
