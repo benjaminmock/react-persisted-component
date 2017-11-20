@@ -1,0 +1,45 @@
+{
+  "name": "react-persisted-component",
+  "version": "0.1.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "babel src --out-dir dist",
+    "watch": "babel -w src --out-dir dist",
+    "test": "mocha --compilers js:babel-register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjaminmock/react-persisted-component.git"
+  },
+  "author": "Benjamin Mock <mail@benjaminmock.de>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benjaminmock/react-persisted-component/issues"
+  },
+  "homepage": "https://github.com/benjaminmock/react-persisted-component#readme",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "chai": "^4.1.2",
+    "enzyme": "^3.2.0",
+    "eslint": "^4.11.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.5.1",
+    "eslint-watch": "^3.1.3",
+    "mocha": "^4.0.1",
+    "polished": "^1.9.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "styled-components": "^2.2.3"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
+}
