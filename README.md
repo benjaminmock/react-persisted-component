@@ -3,7 +3,7 @@
 This component persists the state of your component in the users session storage
 
 ## example usage
-```
+```javascript
 import React from "react";
 import PersistedComponent from "react-persisted-component";
 
