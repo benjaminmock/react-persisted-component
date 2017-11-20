@@ -2,11 +2,12 @@
   "name": "react-persisted-component",
   "version": "0.1.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/PersistedComponent.js",
   "scripts": {
     "build": "babel src --out-dir dist",
     "watch": "babel -w src --out-dir dist",
-    "test": "mocha --compilers js:babel-register"
+    "test": "mocha --compilers js:babel-register",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",

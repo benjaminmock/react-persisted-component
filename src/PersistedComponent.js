@@ -1,3 +1,5 @@
+import { Component } from "react";
+
 export default class PersistedComponent extends Component {
   constructor(props, storageKey) {
     super(props);
