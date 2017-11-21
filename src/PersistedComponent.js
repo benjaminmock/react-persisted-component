@@ -1,13 +1,16 @@
 import { Component } from "react";
 
 export default class PersistedComponent extends Component {
-  constructor(props, storageKey) {
+  constructor(
+    props,
+    storageKey,
+    storage = (window && window.sessionStorage) || {}
+  ) {
     super(props);
     this.storageKey = storageKey;
+    this.storage = storage;
     try {
-      this.state = JSON.parse(
-        sessionStorage && sessionStorage.getItem(this.storageKey)
-      );
+      this.state = JSON.parse(this.storage.getItem(this.storageKey));
     } catch (err) {}
   }
 
@@ -17,11 +20,9 @@ export default class PersistedComponent extends Component {
 
   setState(state, callback) {
     super.setState(state, () => {
-      if (sessionStorage) {
-        try {
-          sessionStorage.setItem(this.storageKey, JSON.stringify(this.state));
-        } catch (err) {}
-      }
+      try {
+        this.storage.setItem(this.storageKey, JSON.stringify(this.state));
+      } catch (err) {}
       (callback || (() => {}))();
     });
   }
