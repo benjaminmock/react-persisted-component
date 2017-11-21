@@ -1,7 +1,7 @@
 {
   "name": "react-persisted-component",
   "version": "0.1.4",
-  "description": "",
+  "description": "React component to persist the state of a component in the users session storage",
   "main": "dist/PersistedComponent.js",
   "scripts": {
     "build": "babel src --out-dir dist",
