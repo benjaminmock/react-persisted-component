@@ -1,6 +1,6 @@
 {
   "name": "react-persisted-component",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "React component to persist the state of a component in the users session storage",
   "main": "dist/PersistedComponent.js",
   "scripts": {
