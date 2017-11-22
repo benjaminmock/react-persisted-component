@@ -1,8 +1,9 @@
 # react-persisted-component
 
-This component persists the state of your component in the users session storage
+PersistedComponent automatically persists the state of a component into the browsers session-/localStorage. By default it uses the sessionStorage, but this is configurable as seen in the example below.
 
-## example usage
+
+## example usage with
 ```javascript
 import React from "react";
 import PersistedComponent from "react-persisted-component";
@@ -10,8 +11,13 @@ import PersistedComponent from "react-persisted-component";
 // extend PersistedComponent instead of React.Component
 class App extends PersistedComponent {
   constructor(props) {
-    // call super with props and storage key
-    super(props, "myStorageKey");
+    super(props);
+
+    // use with custom storageKey
+    // super(props, "myStorageKey");
+
+    // use with custom storageKey and persist into localStorage
+    // super(props, "myStorageKey", localStorage);
 
     const initialState = { count: 0 };
     // get persisted state

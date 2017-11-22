@@ -7,7 +7,9 @@ export default class PersistedComponent extends Component {
     storage = (window && window.sessionStorage) || {}
   ) {
     super(props);
-    this.storageKey = storageKey;
+    this.storageKey = storageKey || this.constructor.name;
+    console.log("*****", storageKey);
+    console.log("#####", this.constructor.name, this.storageKey);
     this.storage = storage;
     try {
       this.state = JSON.parse(this.storage.getItem(this.storageKey));
